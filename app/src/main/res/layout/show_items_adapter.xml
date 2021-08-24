@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentCard"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="7dp"
+    android:layout_marginVertical="5dp"
+    android:layout_marginHorizontal="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageAdapter"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/symbol"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/symbol"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@color/design_default_color_primary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:background="@color/design_default_color_primary"
+            android:textSize="18sp"
+            android:id="@+id/priceAdapter"
+            android:textColor="@color/white"
+            android:layout_toLeftOf="@+id/symbol"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:id="@+id/nameItemAdapter"
+            android:layout_below="@+id/imageAdapter"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

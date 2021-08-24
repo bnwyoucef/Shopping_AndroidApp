@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <Button
+        android:id="@+id/addTocartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#51BC56"
+        android:text="@string/add_to_cart" />
+
+    <TextView
+        android:id="@+id/detailsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addTocartButton"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/name"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/symbolDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addTocartButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/symbol"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/detailsPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addTocartButton"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/symbolDetails"
+        android:text="@string/price"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/detailsImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/detailsName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@color/design_default_color_primary" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/thirdStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailsImage"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:id="@+id/rateNoThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_outline_24" />
+
+
+            <ImageView
+                android:id="@+id/rateThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_rate_24"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/secondStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailsImage"
+            android:layout_toStartOf="@+id/thirdStar"
+            android:layout_marginTop="10dp">
+
+
+            <ImageView
+                android:id="@+id/rateNoSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_outline_24" />
+
+            <ImageView
+                android:id="@+id/rateSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_rate_24"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/firstStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailsImage"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/secondStar">
+
+            <ImageView
+                android:id="@+id/rateNoFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_outline_24" />
+
+            <ImageView
+                android:id="@+id/rateFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_rate_24"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/reviewTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstStar"
+        android:layout_marginStart="10dp"
+        android:text="@string/reviews"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/addReviewTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstStar"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/reviewTxt"
+        android:text="@string/add_review"
+        android:textColor="#4CAF50"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewTxt"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>
